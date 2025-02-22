@@ -79,7 +79,7 @@ We named our lightweight model trained with Muon "Moonlight". We compared Moonli
 
 ### Inference with Hugging Face Transformers 
 
-We introduce how to use our model at inference stage using transformers library. It is recommended to use python=3.10, torch>=2.1.0, and the latest version of transformers as the development environment. 
+We introduce how to use our model at inference stage using transformers library. It is recommended to use python=3.10, torch>=2.1.0, and transformers=4.48.2 as the development environment. 
 
 For our pretrained model (Moonlight):
 ```python
@@ -98,6 +98,7 @@ prompt = "1+1=2, 1+2="
 inputs = tokenizer(prompt, return_tensors="pt", padding=True, truncation=True).to(model.device)
 generated_ids = model.generate(**inputs, max_new_tokens=100)
 response = tokenizer.batch_decode(generated_ids)[0]
+print(response)
 ```
 
 For our instruct model (Moonlight-Instruct):
@@ -114,7 +115,6 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
 
-prompt = "Give me a short introduction to large language model."
 messages = [
     {"role": "system", "content": "You are a helpful assistant provided by Moonshot-AI."},
     {"role": "user", "content": "Is 123 a prime?"}
@@ -122,6 +122,7 @@ messages = [
 input_ids = tokenizer.apply_chat_template(messages, add_generation_prompt=True, return_tensors="pt").to(model.device)
 generated_ids = model.generate(inputs=input_ids, max_new_tokens=500)
 response = tokenizer.batch_decode(generated_ids)[0]
+print(response)
 ```
 
 Moonlight has the same architecture as DeepSeek-V3, which is supported by many popular inference engines, such as VLLM and SGLang. As a result, our model can also be easily deployed using these tools.  
