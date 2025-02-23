@@ -16,7 +16,7 @@ Recently, the [Muon optimizer](https://github.com/KellerJordan/Muon) based on ma
 
 Based on these improvements, we introduce **Moonlight**, a 3B/16B-parameter Mixture-of-Expert (MoE) model trained with 5.7T tokens using Muon. Our model improves the current Pareto frontier, achieving better performance with much fewer training FLOPs compared to prior models.
 
-We open-source our distribued Muon implementation that is memory optimal and communication efficient. We also release the pretrained, instruction-tuned, and intermediate checkpoints to support future research.
+We open-source our distributed Muon implementation that is memory optimal and communication efficient. We also release the pretrained, instruction-tuned, and intermediate checkpoints to support future research.
 
 Our code is available at [MoonshotAI/Moonlight](https://github.com/MoonshotAI/Moonlight).
 
