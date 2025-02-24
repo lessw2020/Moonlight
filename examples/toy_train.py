@@ -318,7 +318,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, default="qwen")
-    parser.add_argument("--optimizer", type=str, default="adamW")
+    parser.add_argument("--optimizer", type=str, default="adamw")
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--wd", type=float, default=0.1)
     parser.add_argument("--dataset", type=str, default="openwebtext-100k")
