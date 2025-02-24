@@ -7,7 +7,7 @@
 <div align="center">
   <a href="Moonlight.pdf"><img src="figures/logo.png" height="16" width="16" style="vertical-align:middle"><b> Tech Report</b></a>  |  
   <a href="https://huggingface.co/moonshotai/Moonlight-16B-A3B"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" height="16" width="16" style="vertical-align:middle"><b> HuggingFace</b></a>  | 
-  <a href="#"><img src="figures/megatron.png" height="16" width="16" style="vertical-align:middle"><b>Megatron(coming soon)</b></a>
+  <a href="https://github.com/NVIDIA/Megatron-LM/pull/1428"><img src="figures/megatron.png" height="16" width="16" style="vertical-align:middle"><b>Megatron-LM Proof of Concept PR</b></a>
 </div>
 
 
